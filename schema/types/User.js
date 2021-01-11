@@ -1,9 +1,8 @@
 import { gql } from "apollo-server-express"
 
-export const typeDefs = gql`
+export const User = gql`
 	# All Queries
 	type Query {
-		hello: String
 		users: [User!]!
 	}
 

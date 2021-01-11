@@ -2,8 +2,9 @@ require("dotenv").config()
 import express from "express"
 import { ApolloServer } from "apollo-server-express"
 import mongoose from "mongoose"
-import { typeDefs } from "./schema/typeDefs/typeDefs"
+import { User } from "./schema/types/User"
 import { resolvers } from "./schema/resolvers/resolvers"
+import { schema } from "./schema"
 
 const startServer = async () => {
 	const PORT = 4000
@@ -19,7 +20,8 @@ const startServer = async () => {
 		.then(() => console.log("Connected to MongoDB"))
 		.catch(err => console.log(err))
 
-	const server = new ApolloServer({ typeDefs, resolvers })
+	// const server = new ApolloServer({ typeDefs: User, resolvers })
+	const server = new ApolloServer({ schema })
 	server.applyMiddleware({ app })
 
 	app.listen({ port: PORT }, () =>

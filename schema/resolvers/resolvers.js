@@ -4,7 +4,7 @@ import { createUserId } from "../../libs/createUserId"
 
 export const resolvers = {
 	Query: {
-		hello: () => "Hello world!",
+		// hello: () => "Hello world!",
 		users: () => User.find(),
 	},
 

@@ -10,6 +10,7 @@
 	"author": "@praneethpike",
 	"license": "ISC",
 	"dependencies": {
+		"@graphql-tools/merge": "^6.2.6",
 		"apollo-server-express": "^2.19.1",
 		"dotenv": "^8.2.0",
 		"express": "^4.17.1",

@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.22.4/libexec/bin/yarn.js add -D prettier
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.22.4/libexec/bin/yarn.js add @graphql-tools/merge
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: EACCES: permission denied, unlink '/Users/Pike/Work/podium/code/podium-backend-scratch/node_modules/.bin/apollo-pbjs'
+  Error: EACCES: permission denied, unlink '/Users/Pike/Work/podium/code/podium-backend/node_modules/.bin/apollo-pbjs'
 
 npm manifest: 
   {
@@ -34,7 +34,8 @@ npm manifest:
   		"express": "^4.17.1",
   		"graphql": "^15.4.0",
   		"mongodb": "^3.6.3",
-  		"mongoose": "^5.11.11"
+  		"mongoose": "^5.11.11",
+  		"prettier": "^2.2.1"
   	},
   	"devDependencies": {
   		"@babel/cli": "^7.12.10",
@@ -3394,6 +3395,11 @@ Lockfile:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
     integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
+  
+  prettier@^2.2.1:
+    version "2.2.1"
+    resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.2.1.tgz#795a1a78dd52f073da0cd42b21f9c91381923ff5"
+    integrity sha512-PqyhM2yCjg/oKkFPtTGUojv7gnZAoG80ttl45O6x2Ug/rMJw4wcc9k6aaf2hibP7BGVCCM33gZoGjyvt9mm16Q==
   
   process-nextick-args@~2.0.0:
     version "2.0.1"

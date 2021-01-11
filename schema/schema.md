@@ -37,13 +37,23 @@ typeDefs folder
 The main file that
 
 1. Merges all the resolvers using lodash merge
+
+```
+const resolvers = merge({},
+	userQuery,
+	createUserMutation,
+	...
+	etc
+)
+```
+
 2. Merges all typeDefs using `mergeTypeDefs()` from `@graphql-tools/merge`
 3. Combines everything and exports using
 
 ```
-import { makeExecutableSchema } from "apollo-server-express"
-export const schema = makeExecutableSchema({
-	typeDefs: mergeTypeDefs([User, Event, Category, City, Auth]),
-	resolvers,
-})
+	import { makeExecutableSchema } from "apollo-server-express"
+	export const schema = makeExecutableSchema({
+		typeDefs: mergeTypeDefs([User, ..., etc]),
+		resolvers,
+	})
 ```

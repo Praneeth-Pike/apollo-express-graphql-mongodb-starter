@@ -1,10 +1,5 @@
 import { User } from "../../models/User"
-
-/**
- * Create user resolvers
- * @param {*} _
- * @param {*} param1
- */
+import { createUserId } from "../../../libs/createUserId"
 
 export const createUser = async (_, { name, email }) => {
 	try {

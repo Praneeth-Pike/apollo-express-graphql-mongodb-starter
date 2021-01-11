@@ -9,7 +9,7 @@ import { User } from "./types/User"
 const resolvers = merge({}, userQueries, userMutations)
 
 export const schema = makeExecutableSchema({
-	// typeDefs: mergeTypeDefs([User]),
-	typeDefs: User,
+	typeDefs: mergeTypeDefs([User]),
+	// typeDefs: User,
 	resolvers,
 })
